@@ -1,0 +1,170 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Signup Container */
+.signup-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo */
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Heading */
+.signup-container h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Subtext */
+.subtext {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.input-group:hover {
+    background-color: #e1e1e1;
+}
+
+.input-group i {
+    font-size: 18px;
+    color: #666;
+    margin-right: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    outline: none;
+    color: #333;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+button {
+    padding: 12px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a6fd1;
+}
+
+/* Register Link */
+.register-link {
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #5a6fd1;
+}
+
+/* Custom Modal Styles */
+.custom-modal {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.modal-content {
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content.success {
+    background-color: #28a745; /* Green for success */
+}
+
+.modal-content.error {
+    background-color: #dc3545; /* Red for error */
+}

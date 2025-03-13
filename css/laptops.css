@@ -1,0 +1,243 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Ensure all elements scale properly */
+* {
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    background: rgba(30, 30, 47, 0.9);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px; /* Add padding for smaller screens */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+/* Laptops Section */
+.laptops-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex: 1;
+}
+
+.laptops-container h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.laptop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px; /* Add padding for smaller screens */
+}
+
+.laptop-card {
+       background: rgba(255, 255, 255, 0.1);
+       border-radius: 15px;
+       padding: 20px;
+       text-align: center;
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+       backdrop-filter: blur(10px);
+       border: 1px solid rgba(255, 255, 255, 0.1);
+       margin-bottom: 80px; /* Add space for bottom nav */
+   }
+
+.laptop-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.laptop-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.laptop-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.laptop-card p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.laptop-card .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.buttons {
+       display: flex;
+       justify-content: space-between;
+       gap: 10px;
+       margin-top: 10px;
+       position: relative; /* Add this */
+       z-index: 1001; /* Ensure buttons are above bottom nav */
+   }
+
+.buttons button {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.buy-now {
+    background-color: #007bff;
+    color: white;
+}
+
+.buy-now:hover {
+    background-color: #0056b3;
+}
+
+.add-cart {
+    background-color: #28a745;
+    color: white;
+}
+
+.add-cart:hover {
+    background-color: #218838;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+       background: rgba(30, 30, 47, 0.9);
+       position: fixed;
+       bottom: 0;
+       width: 100%;
+       display: flex;
+       justify-content: space-around;
+       padding: 10px 0;
+       backdrop-filter: blur(10px);
+       border-top: 1px solid rgba(255, 255, 255, 0.1);
+       z-index: 1000; /* Ensure bottom nav is below buttons */
+   }
+
+.bottom-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom-nav a i {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Custom Alert Box Styles */
+   .custom-alert {
+       position: fixed;
+       bottom: 20px;
+       left: 50%;
+       transform: translateX(-50%);
+       background-color: #28a745;
+       color: white;
+       padding: 15px 30px;
+       border-radius: 5px;
+       font-size: 16px;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       z-index: 2000;
+       opacity: 0;
+       visibility: hidden;
+       transition: opacity 0.3s ease, visibility 0.3s ease, bottom 0.3s ease;
+   }
+
+   .custom-alert.show {
+       opacity: 1;
+       visibility: visible;
+       bottom: 30px;
+   }
+
+   /* Animation for Alert Box */
+   @keyframes slideIn {
+       from {
+           bottom: -50px;
+           opacity: 0;
+       }
+       to {
+           bottom: 30px;
+           opacity: 1;
+       }
+   }
+
+   @keyframes slideOut {
+       from {
+           bottom: 30px;
+           opacity: 1;
+       }
+       to {
+           bottom: -50px;
+           opacity: 0;
+       }
+   }
