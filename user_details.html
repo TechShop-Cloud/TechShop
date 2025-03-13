@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="user_details.css">
+</head>
+<body>
+
+    <div class="details-container">
+        <h2 id="userName"></h2>
+        <p><strong>Email:</strong> <span id="userEmail"></span></p>
+        <label><strong>Password:</strong></label>
+        <input type="text" id="userPassword">
+        
+        <label><strong>Role:</strong></label>
+        <select id="userRole">
+            <option value="User">User</option>
+            <option value="Admin">Admin</option>
+            <option value="Premium">Premium</option>
+            <option value="More">More</option>
+        </select>
+
+        <button class="save-btn" onclick="saveChanges()">Save Changes</button>
+
+        <h3>Ban User</h3>
+        <button class="ban-btn" onclick="banUser('temporary')">Temporary Ban</button>
+        <button class="ban-btn" onclick="banUser('permanent')">Permanent Ban</button>
+    </div>
+
+    <script src="js/user_details.js"></script>
+</body>
+</html>

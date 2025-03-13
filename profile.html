@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img id="profile-pic" src="profile-pic.jpg" alt="Profile Picture">
+            <input type="file" id="profile-upload" accept="image/*" style="display: none;">
+            <label for="profile-upload" class="upload-btn"><i class="fas fa-camera"></i></label>
+            <h1 id="user-name">John Doe</h1>
+            <p id="user-username">@johndoe</p>
+            <p class="membership-status">Normal Member</p>
+        </div>
+
+        <div class="profile-details">
+            <p><i class="fas fa-envelope"></i> <span id="user-email">john.doe@example.com</span></p>
+            <p><i class="fas fa-calendar"></i> <span id="user-joined">Joined: January 1, 2025</span></p>
+            <p><i class="fas fa-map-marker-alt"></i> <span id="user-location">New York, USA</span></p>
+        </div>
+
+        <button class="upgrade-btn"> <i class="fas fa-crown"></i> Upgrade to Premium </button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

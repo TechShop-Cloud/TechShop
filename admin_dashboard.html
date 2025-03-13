@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - NCPL</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/admin-styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <div class="navbar-right">
+            <a href="admin_dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="users.html"><i class="fas fa-users"></i> Manage Users</a>
+            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+            <a href="analytics.html"><i class="fas fa-chart-line"></i> Analytics</a>
+            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a href="#" class="profile-icon">
+                <img src="admin-pic.jpg" alt="Admin Profile Picture">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-header">
+            <h2>Welcome, Admin!</h2>
+            <p>Manage your website and users from here.</p>
+        </div>
+
+        <!-- Cards Section -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Users</h3>
+                <p id="total-users">100</p>
+            </div>
+            <div class="card">
+                <h3>Active Users</h3>
+                <p id="active-users">75</p>
+            </div>
+            <div class="card">
+                <h3>Revenue</h3>
+                <p id="revenue">$5000</p>
+            </div>
+        </div>
+
+        <!-- Recent Activities -->
+        <div class="recent-activities">
+            <h3>Recent Activities</h3>
+            <ul id="activities-list">
+                <li>User John Doe registered.</li>
+                <li>User Jane Doe upgraded to Premium.</li>
+                <li>New order placed by User123.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="js/admin-script.js"></script>
+</body>
+</html>

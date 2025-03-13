@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Settings</title>
+    <link rel="stylesheet" href="css/styles2.css">
+</head>
+<body>
+
+    <div class="settings-container">
+        <h2>Admin Settings</h2>
+        <label>Change Admin Password:</label>
+        <input type="password" id="adminPassword">
+        <button onclick="updatePassword()">Update Password</button>
+
+        <label>Site Maintenance Mode:</label>
+        <select id="maintenanceMode">
+            <option value="off">Off</option>
+            <option value="on">On</option>
+        </select>
+        <button onclick="updateSettings()">Save Settings</button>
+    </div>
+
+    <script src="js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Home | TechShop</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.jpeg" alt="TechShop Logo">
+                <h1>TechShop</h1>
+            </div>
+            <div class="profile">
+                <a href="profile.html" class="profile-link">
+                    <div class="profile-avatar">
+                        <img src="user_avatar.jpeg" onerror="this.src='default-avatar.png'" alt="User Avatar">
+                    </div>
+                    <span>Account</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to TechShop</h1>
+            <p>Experience the best in electronics with unbeatable deals.</p>
+            <a href="laptop.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <a href="laptop.html">
+                    <img src="1.webp" alt="Laptops">
+                </a>
+                <p class="category-name">Laptops</p>
+            </div>
+            <div class="category-card">
+                <a href="monitors.html">
+                    <img src="2.webp" alt="Monitors">
+                </a>
+                <p class="category-name">Monitors</p>
+            </div>
+            <div class="category-card">
+                <a href="mouse.html">
+                    <img src="3.webp" alt="Mouse">
+                </a>
+                <p class="category-name">Mouse</p>
+            </div>
+            <div class="category-card">
+                <a href="keyboards.html">
+                    <img src="4.webp" alt="Keyboards">
+                </a>
+                <p class="category-name">Keyboards</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔹 Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="orders.html" class="nav-item">
+            <i class="fas fa-box"></i>
+            <span>My Orders</span>
+        </a>
+        <a href="cart.html" class="nav-item">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
+        </a>
+        <a href="admin_dashboard.html" class="nav-item admin-only" style="display: none;">
+        <i class="fas fa-user-shield"></i>
+        <span>Admin</span>
+    </a>
+</nav>
+    </nav>
+
+    <script src="js/home.js"></script>
+</body>
+</html>
